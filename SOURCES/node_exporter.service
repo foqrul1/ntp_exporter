@@ -1,1 +1,16 @@
+cat <<'EOF' > ~/rpmbuild/SOURCES/node_exporter/node_exporter.service
+[Unit]
+Description=Prometheus Node Exporter
+Documentation=https://prometheus.io/
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=node_exporter
+ExecStart=/usr/local/bin/node_exporter --collector.textfile.directory=/var/lib/node_exporter/textfile_collector
+Restart=always
+
+[Install]
+WantedBy=default.target
+EOF
 
