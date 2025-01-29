@@ -14,7 +14,7 @@ This project provides an RPM package for exporting NTP server metrics as Prometh
    rpmbuild -ba SPECS/ntp_exporter.spec
 
 
-How to Use This Script
+How to Use setup_monitoring.sh  Script
 Copy and save it as setup_monitoring.sh.
 Make it executable:
 bash
